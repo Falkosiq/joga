@@ -315,8 +315,11 @@
 
 	@media screen and (max-width:480px) {
 		.hero .hero-content {
-			padding-top: 0%;
+			padding-top: 160px;
 		}
+        .logo {
+            display:none;
+        }
 
 		.hero .btn {
 			display: block;
