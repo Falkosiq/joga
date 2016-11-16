@@ -1,0 +1,43 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <h1>Plan zajęć</h1>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dzień</th>
+                <th>Godzina</th>
+                <th>Rodzaj zajęć</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for activity in activities %}
+            <tr>
+                <td><a href="{{ path('admin_activity_show', { 'id': activity.id }) }}">{{ activity.id }}</a></td>
+                <td>{{ activity.day }}</td>
+                <td>{{ activity.hour }}</td>
+                <td>{{ activity.type }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_activity_show', { 'id': activity.id }) }}">Pokaż</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_activity_edit', { 'id': activity.id }) }}">Edytuj</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_activity_new') }}">Dodaj nowe zajęcia</a>
+        </li>
+    </ul>
+{% endblock %}

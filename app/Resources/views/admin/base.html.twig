@@ -1,0 +1,20 @@
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="{{ asset('style/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('style/styles.css') }}">
+    {%  endblock %}
+</head>
+
+<body style="background:url('{{ asset('img/hero.jpg') }}'); -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;">
+
+<div class="main">
+        <a href="{{ path('homepage') }}"><img class="img-responsive lg img-center" src="{{ asset('img/logo.png') }}"></a>
+{% block body %}
+
+
+{% endblock %}
+</div>
+</body>

@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
-@import 'https://fonts.googleapis.com/css?family=Roboto:100';
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -357,15 +357,32 @@ Hero
   min-height: 100vh;
   background: url("../img/hero.jpg") center center;
   background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
   position: relative; }
   .hero .down-arrow a {
     color: #fff;
 font-size: 60px}
   .hero h1 {
     color: #fff;
-    margin-bottom: 40px; }
-  .hero p.intro {
+    margin-bottom: 40px;
+      margin-top:0px;
+    font-size:180px;
+  }
+  .hero h2 {
+      color: #fff;
+      margin-bottom: 40px;
+      font-size:100px;
+  }
+.hero h3 {
     color: #fff;
+    margin-bottom: 40px;
+    font-size:72px;
+    font-weight:100;
+}
+  .hero p.intro {
+    color: #00534e;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 80px; }
@@ -539,21 +556,38 @@ Schedule
     text-align: center;
 }
 .sch-cell{
+    cursor:default;
     padding:20px;
     margin:8px;
     background:#73E9C5;
     text-align: center;
     -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
-  -webkit-transition-duration: 300ms;
-  transition-duration: 300ms;
-  -webkit-transition-property: color, border-color, background-color, transform;
-  transition-property: color, border-color, background-color, transform;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-property: transform, background;
+  transition-property: transform, background;
   text-decoration: none;
 }
+.sch-cell > p{
+    padding:0px;
+    margin:0px;
+    display:none;
+}
 .sch-cell:hover{
-    z-index: 100;
+    z-index: 2;
+    width:auto;
+    background:#A4EBD5;
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
     transform: scale(1.5);
+    margin-bottom:-22px;
+}
+
+.sch-cell:hover > p{
+    display:block;
 }
 
 /* ==========================================================================
@@ -567,6 +601,34 @@ Prices
 .last-offer{
     padding-bottom:50px;
 }
+/* ==========================================================================
+Admin Panel
+========================================================================== */
+
+.main{
+    margin:40px;
+    background:rgba(115,233,197,0.8);
+    color:#000;
+    padding:40px;
+}
+
+.main h1{
+    text-align: center;
+    color:#fff;
+}
+
+.main a{
+    font-weight:800;
+    color:#000;
+}
+.main a:hover{
+    color:#880000;
+}
+
+.lg{
+    max-width: 200px;
+}
+
 /* ==========================================================================
 Features-stack
 ========================================================================== */
