@@ -1,0 +1,15 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <h1>Panel administracyjny</h1>
+    <h2>Edytuj sekcję:</h2>
+    <h3><a href="{{ path('admin_section_edit', { 'id': 1 }) }}">O Centrum</a></h3>
+    <h3><a href="{{ path('admin_section_edit', { 'id': 2 }) }}">Zajęcia</a></h3>
+    <h3><a href="{{ path('admin_section_edit', { 'id': 3 }) }}">Cennik</a></h3>
+    <h3><a href="{{ path('admin_section_edit', { 'id': 4 }) }}">Regulamin</a></h3>
+    <h3><a href="{{ path('admin_section_edit', { 'id': 5 }) }}">Warsztaty</a></h3>
+    <h3><a href="{{ path('admin_section_edit', { 'id': 6 }) }}">Kontakt</a></h3>
+    <h2><a href="{{ path('admin_activity_index') }}">Zarządzaj planem zajęć</a></h2>
+
+
+{% endblock %}

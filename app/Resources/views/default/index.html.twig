@@ -27,6 +27,7 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
+                            <li><a href="#about">O Centrum</a></li>
                             <li><a href="#activities">Zajęcia</a></li>
                             <li><a href="#schedule">Plan zajęć</a></li>
                             <li><a href="#prices">Cennik</a></li>
@@ -49,38 +50,35 @@
                     <h3 style="font-weight:400;">Joga Centrum</h3>
                     <div class="logo"><img src="{{ asset('img/logo.png') }}" alt="logo" class="img-center img-responsive"></div>
                     <h3>Ewa Falkowska</h3>
-                    <p class="intro">Odkryj z nami świat jogi. Zapisz się na zajęcia już dziś!</p>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="down-arrow floating-arrow"><a href="#activities"><i class="fa fa-angle-down"></i></a></div>
+    <div class="down-arrow floating-arrow"><a href="#about"><i class="fa fa-angle-down"></i></a></div>
 </section>
-<section id="about">
-    
+{%  if sections|length >=6 %}
+    {% set sec0 = sections.0 %}
+    {% set sec1 = sections.1 %}
+    {% set sec2 = sections.2 %}
+    {% set sec3 = sections.3 %}
+    {% set sec4 = sections.4 %}
+    {% set sec5 = sections.5 %}
+<section id="about" class="about">
+    <div class="full-container about-wrap">
+        <img class="about-img img-responsive" src="{{ asset('img/' ~ sec0.photo) }}">
+        <br><p>{{ sec0.content|nl2br }}</p>
+    </div>
+
 </section>
 <section class="activities" id="activities">
     <div class="full-container">
         <div class="row vcenter">
-            <div data-aos="slide-right" class="col-md-6 act shaped text-center">
-                <h1>Zajęcia</h1>
+            <div data-aos="slide-right" class="col-md-6 act shaped text-center" style="background:url('{{ asset('img/' ~ sec1.photo) }}'); background-size:cover;">
+                <h1>{{ sec1.title }}</h1>
             </div>
             <div data-aos="zoom-in" class="col-md-6 act-text">
-                1.  KURS DLA POCZĄTKUJĄCYCH <br>
-                (wtorki i piątki godzina 20.00)
-                Trwający 2 miesiące cykl zajęć, na którym poznajemy podstawy jogi, uczymy się powitania słońca, relaksacji, wykonujemy ćwiczenia oddechowe. Kurs jest wprowadzeniem w świat jogi,  można  po nim dołączyć  - zależnie od preferencji - do dowolnie wybranej grupy. Kurs dla początkujących jest grupą zamkniętą, wymagane są zapisy i zaliczka. Kolejny kurs będzie odbywał się we wtorki i piątki o godzinie 20.00 zaczynamy 15 listopada 2016 r. o 20.00.
-                <br><br>
-                2. GRUPY PODSTAWOWE i JOGA KRĘGOSŁUPA <br>
-                (poniedziałki, środy, piątki godzina 16.30)
-                Odpowiednie dla każdej osoby chcącej zadbać o kręgosłup, wzmocnić i uelastycznić ciało  oraz zmniejszyć jego napięcie. Poprawiają kondycję, samopoczucie, uczą jak radzić sobie ze stresem. Zajęcia składają się z relaksacji oraz łagodnych, przyjemnych ćwiczeń usprawniających, często zalecanych w terapii kręgosłupa.
-                <br><br>
-                3. GRUPA OGÓLNA
-                (poniedziałki, środy i piątki godzina 18.15) <br>
-                Zajęcia dla osób konsekwentnych w praktyce jogi, obejmujące powitanie słońca, pozycje stojące i odwrócone jak również ćwiczenia oddechowe i relaksacyjne - każdy kto czuje się na siłach, może dołączyć po kursie dla początkujących.
-                <br><br>
-                4. GRUPY ŁĄCZONE
-                ( środy 9.30, poniedziałki i środy godzina 20.00) <br>
-                Zajęcia,  na których mogą spotkać się osoby bardziej zaawansowane w praktyce jogi z osobami początkującymi, wszyscy ćwiczą razem zgodnie ze swoimi możliwościami.
+                {{ sec1.content|nl2br }}
             </div>
         </div>
     </div>
@@ -140,45 +138,53 @@
 <section class="prices" id="prices">
     <div class="full-container">
         <div class="row vcenter">
-            <div data-aos="slide-right" class="col-md-6 act shaped text-center">
-                <h1>Cennik</h1>
+            <div data-aos="slide-right" class="col-md-6 act shaped text-center" style="background:url('{{ asset('img/' ~ sec2.photo) }}'); background-size:cover;">
+                <h1>{{ sec2.title }}</h1>
             </div>
             <div data-aos="zoom-in" class="col-md-6 act-text">
-                <div class="row">
-                    <div class="offer col-md-7">KURS DLA POCZĄTKUJĄCYCH</div>
-                    <div class="offer col-md-5">290 PLN</div>
-                </div>
-                <div class="row">
-                    <div class="offer col-md-7">4 zajęcia - 1 x tyg</div>
-                    <div class="offer col-md-5">90 PLN</div>
-                </div>
-                <div class="row">
-                    <div class="offer col-md-7">8 zajęć - 2 x tyg</div>
-                    <div class="offer col-md-5">150 PLN</div>
-                </div>
-                <div class="row">
-                    <div class="offer col-md-7">12 zajęć - 3 x tyg</div>
-                    <div class="offer col-md-5">190 PLN</div>
-                </div>
-                <div class="row">
-                    <div class="offer col-md-7">OPEN - dowolna ilość zajęć w tygodniu</div>
-                    <div class="offer col-md-5">210 PLN</div>
-                </div>
-                <div class="row">
-                    <div class="offer col-md-7">Jednorazowe wejście</div>
-                    <div class="offer last-offer col-md-5">30 PLN</div>
-                </div>
-                <div>
-                    Zajęcia płatne z góry.<br>
-                    KARNETY są ważne przez miesiąc ( 4 tygodnie ) a w przypadku KURSU DLA POCZĄTKUJĄCYCH 2 miesiące ( 8 tygodni ).<br>
-                    Z karnetu może korzystać jedna osoba.
-                </div>
+                {{ sec2.content|nl2br }}
             </div>
         </div>
     </div>
 </section>
+    <section class="terms" id="terms">
+        <div class="full-container">
+            <div class="row vcenter">
+                <div data-aos="slide-right" class="col-md-6 act shaped-2 text-center" style="background:url('{{ asset('img/' ~ sec3.photo) }}'); background-size:cover;">
+                    <h1>{{ sec3.title }}</h1>
+                </div>
+                <div data-aos="zoom-in" class="col-md-6 act-text">
+                    {{ sec3.content|nl2br }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="workshops" id="workshops">
+        <div class="full-container">
+            <div class="row vcenter">
+                <div data-aos="slide-right" class="col-md-6 act shaped text-center" style="background:url('{{ asset('img/' ~ sec4.photo) }}'); background-size:cover;">
+                    <h1>{{ sec4.title }}</h1>
+                </div>
+                <div data-aos="zoom-in" class="col-md-6 act-text">
+                    {{ sec4.content|nl2br }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="full-container">
+            <div class="row vcenter">
+                <div data-aos="slide-right" class="col-md-6 act shaped-2 text-center" style="background:url('{{ asset('img/' ~ sec5.photo) }}'); background-size:cover;">
+                    <h1>{{ sec5.title }}</h1>
+                </div>
+                <div data-aos="zoom-in" class="col-md-6 act-text">
+                    {{ sec5.content|raw }}
+                </div>
+            </div>
+        </div>
+    </section>
 
-
+{% endif %}
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
